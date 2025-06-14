@@ -2,17 +2,13 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
     commands:
-      - echo Installing dependencies...
-      - npm ci --legacy-peer-deps
-
+      - echo "Nothing to install for static website"
   build:
     commands:
-      - echo Building the React app...
-      - npm run build
+      - echo "No build step for static website"
+
 
 artifacts:
   files:
-    - '*/'
+    - '**/*'
