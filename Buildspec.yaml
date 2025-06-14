@@ -6,12 +6,15 @@ phases:
       nodejs: 18
     commands:
       - echo Installing dependencies...
-      - npm ci
+      - npm ci --legacy-peer-deps
+
   build:
     commands:
-      - echo Building app...
+      - echo Building the React app...
       - npm run build
 
 artifacts:
   files:
-    - '**/*'
+    - '*/'
+  base-directory: dist
+  discard-paths: no
